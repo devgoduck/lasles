@@ -2810,8 +2810,8 @@ a {
     display: flex;
     justify-content: center; }
     .hero__image img {
-      margin: 2rem 0;
-      width: 80%; }
+      width: 80%;
+      z-index: 1; }
   .hero__about {
     text-align: center; }
     .hero__about h2 {

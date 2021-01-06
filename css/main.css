@@ -3406,12 +3406,48 @@ a {
   .reviews__item-person-photo {
     margin-right: 15px; }
 
+.reviews__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .reviews__controls-arrows {
+    display: flex; }
+    .reviews__controls-arrows-prev, .reviews__controls-arrows-next {
+      padding: 15px;
+      border-radius: 50%;
+      border: 2px solid #F53838;
+      display: flex; }
+      .reviews__controls-arrows-prev svg, .reviews__controls-arrows-next svg {
+        width: 25px;
+        height: 25px;
+        fill: #F53838; }
+      .reviews__controls-arrows-prev:hover, .reviews__controls-arrows-next:hover {
+        cursor: pointer;
+        background-color: #F53838; }
+        .reviews__controls-arrows-prev:hover svg, .reviews__controls-arrows-next:hover svg {
+          fill: #fff; }
+    .reviews__controls-arrows-prev {
+      transform: rotate(180deg);
+      margin-right: 15px; }
+  .reviews__controls-dots {
+    display: flex; }
+    .reviews__controls-dots-item {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background-color: #DDE0E4;
+      margin-right: 10px; }
+      .reviews__controls-dots-item_active {
+        width: 45px;
+        background: #F53838;
+        border-radius: 15px; }
+
 .slick-list {
-  margin: 0 -15px; }
+  margin: 0 -5px; }
 
 .slick-slide {
-  margin: 0 15px;
-  width: 400px !important; }
+  margin: 0 5px;
+  width: 370px !important; }
 
 .slick-prev {
   background: #F53838; }

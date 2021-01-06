@@ -3337,8 +3337,13 @@ a {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between; }
+    @media (max-width: 991.98px) {
+      .map ul {
+        justify-content: center; } }
     .map ul li {
       width: 9.375rem;
+      padding: 15px;
+      text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center; }
@@ -3364,7 +3369,7 @@ a {
 .content__item {
   width: 360px;
   height: 230px;
-  border: 3px solid #ddd;
+  border: 1px solid #ddd;
   border-radius: 10px;
   padding: 25px; }
 
@@ -3464,8 +3469,97 @@ a {
 .slick-prev {
   background: #F53838; }
 
+.footer {
+  background: #f8f8f8;
+  padding: 40px 0; }
+  .footer .container {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 991.98px) {
+      .footer .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center; } }
+  .footer__about {
+    max-width: 340px; }
+    .footer__about-brand {
+      margin-bottom: 20px; }
+    .footer__about-social {
+      display: flex;
+      margin: 20px 0 !important; }
+      .footer__about-social li:hover {
+        opacity: .8; }
+      .footer__about-social li:not(:last-of-type) {
+        margin-right: 15px; }
+      .footer__about-social li a {
+        width: 25px;
+        height: 25px; }
+        .footer__about-social li a svg {
+          width: 30px;
+          height: 30px; }
+          .footer__about-social li a svg path {
+            fill: #F53838; }
+  .footer__menu {
+    display: flex; }
+    @media (max-width: 991.98px) {
+      .footer__menu {
+        display: none; } }
+    .footer__menu h5 {
+      text-transform: capitalize;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #0B132A;
+      margin: 0; }
+    .footer__menu ul {
+      list-style: none;
+      margin: 0;
+      margin-left: 2.5rem; }
+      .footer__menu ul li:not(:last-of-type) {
+        margin-bottom: 10px; }
+      .footer__menu ul li a {
+        text-decoration: none;
+        color: #4F5665;
+        line-height: 1.875rem; }
+        .footer__menu ul li a:hover {
+          color: #0B132A; }
+
 @keyframes fade {
   0% {
     transform: translateX(-120%); }
   100% {
     transform: translateX(0%); } }
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .preloader__image {
+    position: relative;
+    width: 20vw;
+    height: 10vh;
+    z-index: 1001;
+    background: url("../images/logo.svg") no-repeat 50% 50%;
+    animation: preloader 3s infinite; }
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0; }
+
+.loaded .preloader {
+  display: none; }
+
+@keyframes preloader {
+  0% {
+    transform: scale(1.5); }
+  50% {
+    transform: scale(2.5); }
+  100% {
+    transform: scale(1.5); } }
